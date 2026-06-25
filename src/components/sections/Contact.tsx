@@ -61,6 +61,7 @@ function validateForm(data: FormData): FormErrors {
 export function Contact() {
   const [form, setForm] = useState<FormData>(initialForm);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -84,21 +85,32 @@ export function Contact() {
     }
 
     setIsSubmitting(true);
+    setServerError(null);
 
-    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
-      form.subject
-    )}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    )}`;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    window.location.href = mailtoLink;
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.message || "Unable to send message. Please try again later.");
+      }
 
-    setTimeout(() => {
-      setIsSubmitting(false);
       setIsSubmitted(true);
       setForm(initialForm);
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 500);
+    } catch (error) {
+      setServerError(
+        error instanceof Error ? error.message : "Something went wrong. Please email me directly."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactDetails = [
@@ -316,7 +328,18 @@ export function Contact() {
                   className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-700 dark:text-emerald-400"
                   role="status"
                 >
-                  Thank you! Your email client should open shortly. If it doesn&apos;t, please email me directly at{" "}
+                  Thank you! Your message was sent successfully. I will reply to you soon.
+                </motion.div>
+              )}
+
+              {serverError && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="rounded-xl border border-rose-500/30 bg-rose-500/10 px-4 py-3 text-sm text-rose-700 dark:text-rose-400"
+                  role="alert"
+                >
+                  {serverError} Please email me directly at {" "}
                   <a href={`mailto:${personalInfo.email}`} className="font-semibold underline">
                     {personalInfo.email}
                   </a>
