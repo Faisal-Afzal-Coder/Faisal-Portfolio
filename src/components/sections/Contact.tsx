@@ -98,7 +98,32 @@ export function Contact() {
 
       if (!response.ok) {
         const data = await response.json().catch(() => null);
-        throw new Error(data?.message || "Unable to send message. Please try again later.");
+        const message = data?.message || "Unable to send message. Please try again later.";
+
+        if (/configured|environment|server/i.test(message)) {
+          const fallbackResponse = await fetch(`https://formsubmit.co/ajax/${personalInfo.email}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              name: form.name,
+              email: form.email,
+              subject: form.subject,
+              message: form.message,
+              _subject: `[Portfolio] ${form.subject}`,
+              _captcha: "false",
+              _template: "table",
+            }),
+          });
+
+          if (!fallbackResponse.ok) {
+            throw new Error(message);
+          }
+        } else {
+          throw new Error(message);
+        }
       }
 
       setIsSubmitted(true);

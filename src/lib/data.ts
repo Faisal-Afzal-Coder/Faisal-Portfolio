@@ -168,8 +168,24 @@ export const projects = [
     ],
     technologies: ["React.js", "JavaScript", "CSS"],
     githubUrl: "https://github.com/Faisal-Afzal-Coder",
-    liveUrl:"https://fanatical-shirt1334.surge.sh/",
+    liveUrl: "https://fanatical-shirt1334.surge.sh/",
     featured: true,
+  },
+  {
+    id: "maryam-portfolio",
+    title: "Maryam Portfolio Website",
+    description:
+      "A modern portfolio website designed to showcase personal work, skills, and contact information with a polished and responsive experience.",
+    features: [
+      "Responsive Layout",
+      "Project Showcase",
+      "About Section",
+      "Contact Section",
+    ],
+    technologies: ["React.js", "Next.js", "Tailwind CSS"],
+    githubUrl: "",
+    liveUrl: "https://maryam-portfolio-uawd.vercel.app",
+    featured: false,
   },
 ];
 

@@ -67,8 +67,19 @@ export async function POST(request: Request) {
       from: from || user,
       to,
       replyTo: data.email,
-      subject: data.subject,
+      subject: `[Portfolio Contact] ${data.subject}`,
       text: `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111827;">
+          <h2 style="margin-bottom: 8px;">New contact message</h2>
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Subject:</strong> ${data.subject}</p>
+          <hr style="margin: 16px 0;" />
+          <p><strong>Message:</strong></p>
+          <p>${data.message.replace(/\n/g, "<br />")}</p>
+        </div>
+      `,
     });
 
     return new Response(JSON.stringify({ success: true }), {
