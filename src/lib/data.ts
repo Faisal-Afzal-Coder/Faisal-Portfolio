@@ -172,6 +172,23 @@ export const projects = [
     featured: true,
   },
   {
+    id: "react-firebase-todos",
+    title: "React Todos with Firebase Auth & Database",
+    description:
+      "A modern todo application built with React and Firebase that supports secure authentication, real-time task storage, and a clean user experience.",
+    features: [
+      "Firebase Authentication",
+      "Real-time Database",
+      "Add and Edit Todos",
+      "Delete Tasks",
+      "User-specific Task Management",
+    ],
+    technologies: ["React.js", "Firebase", "JavaScript", "Tailwind CSS"],
+    githubUrl: "",
+    liveUrl: "https://react-with-firebase-8e3de.web.app",
+    featured: false,
+  },
+  {
     id: "maryam-portfolio",
     title: "Maryam Portfolio Website",
     description:
