@@ -204,6 +204,56 @@ export const projects = [
     liveUrl: "https://maryam-portfolio-uawd.vercel.app",
     featured: false,
   },
+  {
+    id: "chat-app",
+    title: "Chat App",
+    description:
+      "A responsive chat application built with React and Vite, featuring a smooth Tailwind CSS interface, animated interactions, and icon-based UI elements.",
+    features: [
+      "Responsive Chat Interface",
+      "Modern React Components",
+      "Tailwind CSS Styling",
+      "Framer Motion Animations",
+      "React Icons Integration",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Icons",
+    ],
+    githubUrl: "",
+    liveUrl: "http://chat-app-714b5.web.app/",
+    featured: false,
+  },
+  {
+    id: "tic-tac-toe-game",
+    title: "Tic Tac Toe Game",
+    description:
+      "An interactive Tic Tac Toe game built with React and Vite, supporting person-to-person gameplay and AI mode with smooth Framer Motion animations.",
+    features: [
+      "Person to Person Mode",
+      "AI Gameplay Mode",
+      "Interactive Game Board",
+      "Responsive Layout",
+      "Animated UI",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Vite",
+      "Framer Motion",
+    ],
+    githubUrl: "",
+    liveUrl: "https://tic-tac-toe-three-eta-89.vercel.app/",
+    featured: false,
+  },
 ];
 
 export const services = [
