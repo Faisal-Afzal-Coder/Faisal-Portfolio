@@ -155,6 +155,28 @@ export const experience = [
 
 export const projects = [
   {
+    id: "weather-app",
+    title: "Weather App",
+    description:
+      "A professional React weather dashboard powered by OpenWeatherMap, providing up-to-date weather information through a clean and responsive interface.",
+    features: [
+      "City Weather Search",
+      "Live Weather Data",
+      "Detailed Weather Conditions",
+      "Responsive Dashboard",
+    ],
+    technologies: [
+      "React.js",
+      "Vite",
+      "JavaScript",
+      "OpenWeatherMap API",
+      "CSS",
+    ],
+    githubUrl: "",
+    liveUrl: "https://weather-app-puce-phi-78.vercel.app/",
+    featured: false,
+  },
+  {
     id: "todo-app",
     title: "Todo Application",
     description:
