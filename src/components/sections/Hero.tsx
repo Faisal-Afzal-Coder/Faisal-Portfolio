@@ -84,12 +84,12 @@ export function Hero() {
             className="mt-10 flex items-center gap-6"
           >
             <div>
-              <p className="font-display text-2xl font-bold text-slate-900 dark:text-white">2+</p>
+              <p className="font-display text-2xl font-bold text-slate-900 dark:text-white">3</p>
               <p className="text-sm text-slate-500 dark:text-slate-400">Months Training</p>
             </div>
             <div className="h-10 w-px bg-slate-200 dark:bg-slate-700" />
             <div>
-              <p className="font-display text-2xl font-bold text-slate-900 dark:text-white">4th</p>
+              <p className="font-display text-2xl font-bold text-slate-900 dark:text-white">5th</p>
               <p className="text-sm text-slate-500 dark:text-slate-400">BSIT Semester</p>
             </div>
             <div className="h-10 w-px bg-slate-200 dark:bg-slate-700" />
