@@ -101,7 +101,7 @@ export const education = [
     id: "bsit",
     degree: "BS Information Technology",
     institution: "Agriculture University Faisalabad",
-    period: "Currently Enrolled · 4th Semester",
+    period: "Currently Enrolled · 5th Semester",
     status: "current" as const,
     description:
       "Pursuing a Bachelor of Science in Information Technology, building a strong foundation in software development, databases, and modern computing practices.",
@@ -119,19 +119,19 @@ export const education = [
     id: "saylani",
     degree: "MERN Stack Development Program",
     institution: "Saylani Mass IT Training",
-    period: "Currently in Final Phase",
-    status: "current" as const,
+    period: "Completed",
+    status: "completed" as const,
     description:
-      "Intensive professional training covering MongoDB, Express.js, React.js, and Node.js — building full-stack applications with industry best practices.",
+      "Successfully completed an intensive MERN Stack Development program covering MongoDB, Express.js, React.js, and Node.js with hands-on application building and industry-oriented training.",
   },
   {
     id: "software-house",
     degree: "MERN Stack Developer Trainee",
     institution: "Software House Training",
-    period: "2+ Months",
-    status: "current" as const,
+    period: "Completed · 3 Months",
+    status: "completed" as const,
     description:
-      "Hands-on industry training focused on professional development workflows, version control, team collaboration, and real-world web application development.",
+      "Completed a 3-month hands-on industry training focused on professional development workflows, version control, team collaboration, and real-world web application development.",
   },
 ];
 
@@ -140,10 +140,10 @@ export const experience = [
     id: "mern-trainee",
     role: "MERN Stack Developer Trainee",
     company: "Software Company",
-    period: "Present",
+    period: "13 April 2026 - 13 July 2026",
     type: "Training",
     description:
-      "Currently receiving practical industry training in a software company where I am learning professional development workflows, version control, team collaboration, and modern web application development.",
+      "Completed a 3-month MERN Stack Developer training program from 13 April 2026 to 13 July 2026, where I focused on professional development workflows, Git and GitHub collaboration, and real-world web application development.",
     highlights: [
       "Professional development workflows",
       "Version control with Git & GitHub",
@@ -174,6 +174,7 @@ export const projects = [
     ],
     githubUrl: "",
     liveUrl: "https://weather-app-puce-phi-78.vercel.app/",
+    detailsUrl: "",
     featured: false,
   },
   {
@@ -191,6 +192,7 @@ export const projects = [
     technologies: ["React.js", "JavaScript", "CSS"],
     githubUrl: "https://github.com/Faisal-Afzal-Coder",
     liveUrl: "https://fanatical-shirt1334.surge.sh/",
+    detailsUrl: "",
     featured: true,
   },
   {
@@ -208,6 +210,7 @@ export const projects = [
     technologies: ["React.js", "Firebase", "JavaScript", "Tailwind CSS"],
     githubUrl: "",
     liveUrl: "https://react-with-firebase-8e3de.web.app",
+    detailsUrl: "",
     featured: false,
   },
   {
@@ -224,6 +227,7 @@ export const projects = [
     technologies: ["React.js", "Next.js", "Tailwind CSS"],
     githubUrl: "",
     liveUrl: "https://maryam-portfolio-uawd.vercel.app",
+    detailsUrl: "",
     featured: false,
   },
   {
@@ -250,6 +254,7 @@ export const projects = [
     ],
     githubUrl: "",
     liveUrl: "http://chat-app-714b5.web.app/",
+    detailsUrl: "",
     featured: false,
   },
   {
@@ -274,7 +279,60 @@ export const projects = [
     ],
     githubUrl: "",
     liveUrl: "https://tic-tac-toe-three-eta-89.vercel.app/",
+    detailsUrl: "",
     featured: false,
+  },
+
+  {
+    id: "manan-client",
+    title: "Manan Client",
+    description:
+      "A professional client-facing web experience designed for a clean presentation, responsive layout, and a modern digital brand presence.",
+    features: [
+      "Responsive Website",
+      "Modern UI/UX",
+      "Fast Loading Experience",
+      "Client Brand Presentation",
+    ],
+    technologies: ["Next.js", "React.js", "Tailwind CSS", "Responsive Design"],
+    githubUrl: "",
+    liveUrl: "https://manan-client.vercel.app/",
+    detailsUrl: "",
+    featured: true,
+  },
+  {
+    id: "umar-molvi-client",
+    title: "Umar Molvi Client",
+    description:
+      "A clean login and client portal experience built for accessibility, usability, and responsive interaction across devices.",
+    features: [
+      "Login Interface",
+      "Responsive Layout",
+      "User-Friendly Experience",
+      "Modern Frontend Design",
+    ],
+    technologies: ["React.js", "Vite", "CSS", "Responsive Design"],
+    githubUrl: "",
+    liveUrl: "https://umar-molvi-client.vercel.app/login",
+    detailsUrl: "",
+    featured: true,
+  },
+  {
+    id: "ecommerce-client",
+    title: "Ecommerce Client",
+    description:
+      "A product-focused eCommerce website tailored for browsing, product presentation, and a smooth shopping journey on all screen sizes.",
+    features: [
+      "Ecommerce Layout",
+      "Product Presentation",
+      "Responsive Design",
+      "Modern Shopping Experience",
+    ],
+    technologies: ["Next.js", "React.js", "Tailwind CSS", "Ecommerce UI"],
+    githubUrl: "",
+    liveUrl: "https://ecommerce-client-gules.vercel.app/",
+    detailsUrl: "",
+    featured: true,
   },
 ];
 
